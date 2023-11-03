@@ -1,0 +1,322 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Boucle Occasional Chair",
+      "image": [
+        "https://cdn11.bigcommerce.com/s-fj5u5hhzyb/images/stencil/1280x1280/products/27344/15554/NEW_Boucle_Occasional_Chair_Lores_01__99432.1675195686.jpg?c=1",
+        "https://cdn11.bigcommerce.com/s-fj5u5hhzyb/images/stencil/1280x1280/products/27344/15469/Boucle_Occasional_Chair_Deepetch_02__74810.1674505757.jpg?c=1"
+      ],
+      "description": " a stylish and comfortable seating option designed for occasional or accent use.",
+      "price": 399.99,
+      "rating": 4.5,
+      "quantity": 20,
+      "outofstock": false,
+      "category": "Chairs"
+    },
+    {
+      "id": 2,
+      "title": "Homall Modern U-Shape Sectional Sofa",
+      "description": "Homall Modern U-Shape Sectional Sofa, Chenille Fabric Modular Couch, 4 Seat Oversized Sofa with Chaise for Living Room.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 549.99,
+      "rating": 4.2,
+      "quantity": 15,
+      "outofstock": false,
+      "category": "Sofas"
+    },
+    {
+      "id": 3,
+      "title": "Wooden Dining Chair",
+      "description": "Classic wooden dining chair for your dining area.",
+      "image": [
+        "https://m.media-amazon.com/images/I/51ZfTjiCXEL._SX300_SY300_QL70_FMwebp_.jpg",
+        "https://m.media-amazon.com/images/I/51qBX7yXpWL.jpg"
+      ],
+      "price": 79.99,
+      "rating": 4.0,
+      "quantity": 20,
+      "outofstock": false,
+      "category": "Chairs"
+    },
+    {
+      "id": 4,
+      "title": "Queen Size Bed",
+      "description": "A comfortable queen-size bed for a good night's sleep.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 599.99,
+      "rating": 4.8,
+      "quantity": 5,
+      "outofstock": false,
+      "category": "Beds"
+    },
+    {
+      "id": 5,
+      "title": "Glass Bookshelf",
+      "description": "A modern glass bookshelf to display your books.",
+      "image":[
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 249.99,
+      "rating": 4.3,
+      "quantity": 12,
+      "outofstock": false,
+      "category": "Shelves"
+    },
+    {
+      "id": 6,
+      "title": "Lounge Chair",
+      "description": "A comfortable lounge chair for relaxation.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 199.99,
+      "rating": 4.6,
+      "quantity": 8,
+      "outofstock": false,
+      "category": "Chairs"
+    },
+    {
+      "id": 7,
+      "title": "Kitchen Table Set",
+      "description": "A compact kitchen table set for small spaces.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 299.99,
+      "rating": 4.2,
+      "quantity": 6,
+      "outofstock": false,
+      "category": "Tables"
+    },
+    {
+      "id": 8,
+      "title": "Leather Recliner Sofa",
+      "description": "A recliner sofa with luxurious leather upholstery.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 799.99,
+      "rating": 4.4,
+      "quantity": 7,
+      "outofstock": false,
+      "category": "Sofas"
+    },
+    {
+      "id": 9,
+      "title": "Office Desk",
+      "description": "A functional office desk with storage drawers.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 169.99,
+      "rating": 4.1,
+      "quantity": 10,
+      "outofstock": false,
+      "category": "Desks"
+    },
+    {
+      "id": 10,
+      "title": "Nightstand",
+      "description": "A wooden nightstand for your bedroom essentials.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 69.99,
+      "rating": 4.0,
+      "quantity": 14,
+      "outofstock": false,
+      "category": "Tables"
+    },
+    {
+      "id": 11,
+      "title": "Velvet Armchair",
+      "description": "A stylish velvet armchair for your living room.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 249.99,
+      "rating": 4.7,
+      "quantity": 9,
+      "outofstock": false,
+      "category": "Chairs"
+    },
+    {
+      "id": 12,
+      "title": "Dresser with Mirror",
+      "description": "A dresser with a mirror for your bedroom.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 349.99,
+      "rating": 4.3,
+      "quantity": 6,
+      "outofstock": false,
+      "category": "Dressers"
+    },
+    {
+      "id": 13,
+      "title": "L-shaped Sectional Sofa",
+      "description": "An L-shaped sectional sofa for your spacious living room.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 1199.99,
+      "rating": 4.5,
+      "quantity": 3,
+      "outofstock": false,
+      "category": "Sofas"
+    },
+    {
+      "id": 14,
+      "title": "Glass Dining Table",
+      "description": "A glass dining table for modern dining spaces.",
+      "image":[
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 349.99,
+      "rating": 4.2,
+      "quantity": 5,
+      "outofstock": false,
+      "category": "Tables"
+    },
+    {
+      "id": 15,
+      "title": "Bookcase with Doors",
+      "description": "A bookcase with glass doors to protect your books.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 199.99,
+      "rating": 4.4,
+      "quantity": 8,
+      "outofstock": false,
+      "category": "Shelves"
+    },
+    {
+      "id": 16,
+      "title": "Ergonomic Office Chair",
+      "description": "An ergonomic office chair for long hours of work.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 149.99,
+      "rating": 4.5,
+      "quantity": 10,
+      "outofstock": false,
+      "category": "Chairs"
+    },
+    {
+      "id": 17,
+      "title": "Queen Size Canopy Bed",
+      "description": "A luxurious queen-size canopy bed for your bedroom.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 799.99,
+      "rating": 4.6,
+      "quantity": 4,
+      "outofstock": false,
+      "category": "Beds"
+    },
+    {
+      "id": 18,
+      "title": "Adjustable Standing Desk",
+      "description": "An adjustable standing desk for a flexible workspace.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 249.99,
+      "rating": 4.3,
+      "quantity": 7,
+      "outofstock": false,
+      "category": "Desks"
+    },
+    {
+      "id": 19,
+      "title": "Sofa Bed with Storage",
+      "description": "A sofa bed with hidden storage compartments.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 599.99,
+      "rating": 4.2,
+      "quantity": 5,
+      "outofstock": false,
+      "category": "Sofa Beds"
+    },
+    {
+      "id": 20,
+      "title": "Oak Wood Bookshelf",
+      "description": "A solid oak wood bookshelf for your home library.",
+      "image": [
+        "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+        "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+      ],
+      "price": 299.99,
+      "rating": 4.1,
+      "quantity": 8,
+      "outofstock": false,
+      "category": "Shelves"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "image": "https://cdn11.bigcommerce.com/s-fj5u5hhzyb/images/stencil/1280x1280/products/27344/15554/NEW_Boucle_Occasional_Chair_Lores_01__99432.1675195686.jpg?c=1",
+      "color": "White"
+    },
+    {
+      "id": 2,
+      "product-id": 1,
+      "image": "https://cdn11.bigcommerce.com/s-fj5u5hhzyb/images/stencil/1280x1280/products/27344/15469/Boucle_Occasional_Chair_Deepetch_02__74810.1674505757.jpg?c=1",
+      "color": "White"
+    },
+    {
+      "id": 3,
+      "product-id": 2,
+      "image": "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+      "color": "Grey"
+    },
+    {
+      "id": 4,
+      "product-id": 2,
+      "image": "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
+      "color": "Grey"
+    },
+    {
+      "id": 5,
+      "product-id": 2,
+      "image": "https://i5.walmartimages.com/asr/660f0422-a571-49e1-b5f1-266476087db4.ed117ebf2cf2ec116014c1ee5f5921e5.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF",
+      "color": "White"
+    },
+    {
+      "id": 6,
+      "product-id": 2,
+      "image": "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-White_0b238f4e-7fa4-431d-97d5-e68ea4564461.39eb74726f78ec7f932cc54d1398e000.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF",
+      "color": "White"
+    }
+  ]
+}

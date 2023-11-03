@@ -1,17 +1,30 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { AuthProvider } from './Context/AuthContext';
 import './App.css';
 import Home from './Pages/Home';
-import Footer from './Components/Footer';
+import Footer from './Components/website/Footer';
+import Navbar from './Components/website/Navbar';
+import NotFound from './Components/website/NotFound';
+// import Register from './Pages/Signup';
+// import SignIn from './Pages/SignIn';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Routes>
-          <Route path='/' element={<Home />} />
-        </Routes>
-        <Footer />
+        {/* <AuthProvider> */}
+          <Navbar />
+          <div className='h-full'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            {/* <Route path='/signup' element={<Register />} />
+            <Route path='/login' element={<SignIn />} /> */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          </div>
+          <Footer />
+        {/* </AuthProvider> */}
       </Router>
     </div>
   );
