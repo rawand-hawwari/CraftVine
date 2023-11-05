@@ -1,29 +1,40 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const Related = (category) => {
-  const [quantity, setQuantity] = useState(2);
+const DisProducts = () => {
+  // const [quantity, setQuantity] = useState(2);
   const [products, setProducts] = useState([]);
-  
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  const category = useParams(); 
+
+
   // fetch products
   useEffect(() => {
+    console.log(category);
     axios
-      .get("http://localhost:5000/products")
+      .get("https://fakestoreapi.com/products")
       .then((response) => {
-        const allProducts = response.data;
-        const chairsProducts = allProducts.filter(product => product.category ===category);
-        setProducts(chairsProducts);
+        setProducts(response.data)
       })
       .catch((error) => {
+        // Handle errors here
         console.error("Error:", error);
       });
   }, []);
 
-
+  useEffect(() => {
+    if (products.length > 0 && category) {
+      const filtered = products.filter((product) => product.rating === category);
+      console.log(products);
+      console.log(filtered);
+      setFilteredProducts(filtered);
+    }
+  }, [products, category]);
   // pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const productPerPage = 3;
+  const productPerPage = 9;
   const totalPages = Math.ceil(products.length / productPerPage);
   const indexOfLastProduct = currentPage * productPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productPerPage;
@@ -48,28 +59,28 @@ const Related = (category) => {
     setCurrentPage(pageNumber);
   };
   // end of pagination
-
-  console.log(products);
   return (
     <div className="my-16">
-      <h1 className="text-teal-600 text-4xl  mb-6 font-bold">Related Products</h1>
+    
+      <h1 className="text-teal-600 text-4xl mb-6 font-bold">Explore Our Products</h1>
       <div className="relative flex flex-wrap gap-7 justify-center items-center mx-16">
-        {currentItems.map((product, id) => (
-          <div key={id} className="group my-2 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
+        {filteredProducts.map((product) => (
+          <div key={product.id} className="group my-2 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
             <Link
               className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
-              to="/"
+              to={`/product/${product.category}`}
             >
               <img
                 className="peer absolute border top-0 right-0 h-full w-full object-cover"
-                src={product.image[0]}
+                src={product.image}
                 alt="product image"
               />
-              <img
+              {/* <img
                 className="peer absolute top-0 border -right-96 h-full w-full object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0"
                 src={product.image[1]}
                 alt="product image"
-              />
+              /> */}
+              {/* <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">39% OFF</span> */}
             </Link>
             <div className="mt-4 px-5 pb-5">
               <a href="#">
@@ -79,6 +90,7 @@ const Related = (category) => {
               </a>
               <div className="mt-2 mb-5 flex items-center justify-between">
                 <p>
+                  {/* <span className="text-3xl font-bold  line-through text-teal-600">${product.price}</span> */}
                   <span className="text-lg font-bold text-slate-900">
                     ${product.price}
                   </span>
@@ -143,7 +155,4 @@ const Related = (category) => {
   );
 };
 
-export default Related;
-
-// function to add items to cart
-// need a category props
+export default DisProducts;

@@ -1,14 +1,19 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
-// import Pfp from "./Pfp";
+import { useCookies } from 'react-cookie';
 
 const Profile = () => {
   const [user, setUser] = useState([]);
+  const [headers, setHeaders] = useState();
+  const [token] = useCookies(['token']);
 
-  // fetch products
   useEffect(() => {
+    setHeaders({'token': token})
     axios
-      .get("http://localhost:5000/users/1")
+      .get(`http://localhost:5000/user`
+      ,{
+        headers:headers
+      })
       .then((response) => {
         setUser(response.data);
       })
@@ -21,9 +26,9 @@ const Profile = () => {
   const [photoName, setPhotoName] = useState(null);
   const [photoPreview, setPhotoPreview] = useState(null);
   const [imageFile, setImageFile] = useState(null);
-  const [oldPassword, setOldPassword] = useState('');
-  const [newPassword, setNewPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  // const [oldPassword, setOldPassword] = useState('');
+  // const [newPassword, setNewPassword] = useState('');
+  // const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState("");
   const fileInputRef = useRef(null);
 
@@ -54,7 +59,7 @@ const Profile = () => {
     e.preventDefault();
     if(!error){
       const updatedUser = {};
-      updatedUser.id = user.id;
+      updatedUser.id = user.user_id;
       if (user.first_name !== "") {
         updatedUser.first_name = user.first_name;
       }
@@ -70,24 +75,26 @@ const Profile = () => {
       if (user.phone !== "") {
         updatedUser.phone = user.phone;
       }
-      if(oldPassword !== '' && newPassword !== '' && confirmPassword !== ''){
-        if(oldPassword === user.password){
-          if(newPassword === confirmPassword){
-            updatedUser.password = newPassword;
-          }else{
-            setError("Password doesn't match");
-          }
-        }else{
-          setError("The password you've entered doesn't match the old password");
-        }
-      }
+      // if(oldPassword !== '' && newPassword !== '' && confirmPassword !== ''){
+      //   if(oldPassword === user.password){
+      //     if(newPassword === confirmPassword){
+      //       updatedUser.password = newPassword;
+      //     }else{
+      //       setError("Password doesn't match");
+      //     }
+      //   }else{
+      //     setError("The password you've entered doesn't match the old password");
+      //   }
+      // }
 
       updatedUser.profile_image_name = imageFile;
       console.log(updatedUser);
       try {
         const response = await axios.put(
-          `http://localhost:5000/users/${user.id}`,
-          updatedUser
+          `http://localhost:5000/updateuser`,
+          updatedUser,{
+            headers:headers
+          }
         );
         console.log(response.data);
       } catch (error) {
@@ -195,7 +202,7 @@ const Profile = () => {
                   //   title="Phone number must be in the format 12-345-6789"
                 />
               </div>
-              <div className="flex flex-col justify-start mt-2">
+              {/* <div className="flex flex-col justify-start mt-2">
                 <label for="first_name" className=" self-start p-2">
                   Change Password
                 </label>
@@ -217,7 +224,7 @@ const Profile = () => {
                   placeholder="Confirm Password"
                   type="password"
                 />
-              </div>
+              </div> */}
             </div>
             <div className="flex justify-end">
               <button
@@ -246,5 +253,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-// needs validation and then update it in data using (put)

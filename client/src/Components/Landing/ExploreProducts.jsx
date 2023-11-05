@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const ExploreProducts = () => {
-  const [quantity, setQuantity] = useState(2);
+  // const [quantity, setQuantity] = useState(2);
   const [products, setProducts] = useState([]);
 
   // pagination
@@ -37,10 +37,10 @@ const ExploreProducts = () => {
   // fetch products
   useEffect(() => {
     axios
-      .get("http://localhost:5000/products")
+      .get("http://localhost:5000/All_products")
       .then((response) => {
         // Handle the response data here
-        setProducts(response.data);
+        setProducts(response.data.data);
       })
       .catch((error) => {
         // Handle errors here
@@ -48,6 +48,22 @@ const ExploreProducts = () => {
       });
   }, []);
 
+  // function to add items to cart
+  const addToCart = async (id) => {
+  //   try {
+  //     const response = await axios.post('https://fakestoreapi.com/carts', {
+  //       "quantity" : product,
+  //       "id" : id
+  //         });
+  //     if (response.status === 201) {
+  //       alert("Added to cart successfully!");
+  //       setCart([...cart, blogPost]);
+  //     }
+  //   } catch (error) {
+  //     console.log("Error adding to cart:", error);
+      
+  //   }
+  };
 
   return (
     <div className="my-16">
@@ -55,18 +71,17 @@ const ExploreProducts = () => {
       <div className="relative flex flex-wrap gap-7 justify-center items-center mx-16">
         {currentItems.map((product, id) => (
           <div key={id} className="group my-2 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-            <Link
+            <Link to={`/product/${product.product_id}`}
               className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
-              to="/"
             >
               <img
                 className="peer absolute border top-0 right-0 h-full w-full object-cover"
-                src={product.image[0]}
+                src={product.image_url}
                 alt="product image"
               />
               <img
                 className="peer absolute top-0 border -right-96 h-full w-full object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0"
-                src={product.image[1]}
+                src={product.image_url}
                 alt="product image"
               />
               {/* <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">39% OFF</span> */}
@@ -74,7 +89,7 @@ const ExploreProducts = () => {
             <div className="mt-4 px-5 pb-5">
               <a href="#">
                 <h5 className="text-xl text-start h-8 mb-5 overflow-hidden tracking-tight text-slate-900">
-                  {product.title}
+                  {product.product_name}
                 </h5>
               </a>
               <div className="mt-2 mb-5 flex items-center justify-between">
@@ -85,7 +100,7 @@ const ExploreProducts = () => {
                   </span>
                 </p>
               </div>
-              <button className="w-full flex items-center justify-center rounded-full bg-teal-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-teal-800 focus:outline-none focus:ring-4 focus:ring-blue-300">
+              <button onClick={addToCart(product.product_id)} className="w-full flex items-center justify-center rounded-full bg-teal-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-teal-800 focus:outline-none focus:ring-4 focus:ring-blue-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="mr-2 h-6 w-6"

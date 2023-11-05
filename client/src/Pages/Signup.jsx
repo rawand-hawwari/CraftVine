@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 function Register() {
+  const history = useNavigate();
+
   const [email, setEmail] = useState("");
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastName] = useState("");
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
@@ -21,22 +25,23 @@ function Register() {
     }
 
     if (!validatePassword(password)) {
-      setError("Password must be at least 6 characters.");
+      setError(`Password must contain at least one lowercase letter, one uppercase letter, \n
+      one digit,\n one special character (@#$%^&!), and be between 6 and 30 characters in length.`);
       return;
     }   else {
         setError("");
     }
-    if(!validateFirstName(firstname))
+    if(!validateFirstName(first_name))
     {
-    setError("First Nmae must be at least 6 number.");
+    setError("First Nmae must be between 3 and 20 characters in length.");
       return;
     }else {
        setError("");
     }
 
-    if(!validateLastName(lastname))
+    if(!validateLastName(last_name))
     {
-    setError("Last Name must be at least 6 number.");
+    setError("Last Name must be between 3 and 20 characters in length.");
       return;
     }else {
        setError("");
@@ -45,10 +50,10 @@ function Register() {
    
 
     try {
-      const response = await axios.post("http://localhost:5000/register", {
+      const response = await axios.post("http://localhost:5000/registration", {
         "email": email,
-        "first_name": firstname,
-        "last_name": lastname,
+        "first_name": first_name,
+        "last_name": last_name,
         "password": password,
         "phone": phone
       });
@@ -56,11 +61,13 @@ function Register() {
       console.log(response.status)
       if (response.status === 201) {
         alert("Sign Up successful!");
+        history("/login");
+
        
       }
      
     } catch (error) {
-      if (error.response && error.response.status === 409) {
+      if (error.response && error.response.status === 400) {
         setError("Email is already taken. Please use a different email.");
       } else {
         setError("An error occurred. Please try again.");
@@ -69,18 +76,19 @@ function Register() {
   };
 
   const validateEmail = (email) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    return /^[^\s@]+@[^\s@]+\.(com|net)$/.test(email);
   };
 
   const validatePassword = (password) => {
-    return password.length >= 6;
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&!])[A-Za-z\d@#$%^&!]{6,30}$/;
+    return passwordPattern.test(password);
   };
-  const validateFirstName = (firstname) => {
-    return /^[A-Za-z\s]+$/.test(firstname);
+  const validateFirstName = (first_name) => {
+    return /^[A-Za-z\s]{3,20}$/.test(first_name);
   };
   
-  const validateLastName = (lastname) => {
-    return /^[A-Za-z\s]+$/.test(lastname);
+  const validateLastName = (last_name) => {
+    return /^[A-Za-z\s]{3,20}$/.test(last_name);
   };
   
   
@@ -95,7 +103,7 @@ function Register() {
           <div className="grid grid-cols-2 gap-4 ">
             <input
               className="w-full p-2 border rounded-md"
-              value={firstname}
+              value={first_name}
               onChange={(e) => setFirstName(e.target.value)}
               placeholder="First name"
               type="text"
@@ -103,7 +111,7 @@ function Register() {
             />
             <input
               className="w-full p-2 border rounded-md"
-              value={lastname}
+              value={last_name}
               onChange={(e) => setLastName(e.target.value)}
               placeholder="Last name"
               type="text"
@@ -151,7 +159,7 @@ function Register() {
           )}
           <button className=" mt-4  focus:outline-none text-blaxk  border-0 py-3 px-12 w-40 font-bold text-sm cursor-pointer transition-all duration-300  ">
             {" "}
-            ot Log in
+            or Log in
           </button>
           <div className="flex justify-center">
             <button className="p-2 mx-3 text-blue-500">

@@ -1,43 +1,47 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { AuthProvider } from './Context/AuthContext';
-import './App.css';
-import Home from './Pages/Home';
-import Footer from './Components/website/Footer';
-import Navbar from './Components/website/Navbar';
-import NotFound from './Components/website/NotFound';
-import Account from './Pages/Account';
-// import Dashboard from './Components/Admin/pages/Dashboard';
-import Settings from './Components/Admin/pages/Settings';
-import Tables from './Components/Admin/pages/Tables';
-import Maps from './Components/Admin/pages/Maps';
-import AccountAdmin from './Components/admin1/AccountAdmin';
-// import Dashboard from './Admin/Dashboard';
-// import Register from './Pages/Signup';
-// import SignIn from './Pages/SignIn';
+import "./App.css";
+import Home from "./Pages/Home";
+import Footer from "./Components/website/Footer";
+import Navbar from "./Components/website/Navbar";
+import NotFound from "./Components/website/NotFound";
+import Account from "./Pages/Account";
+import SignIn from "./Pages/SignIn";
+import Signup from "./Pages/Signup";
+import Cart from "./Pages/Cart";
+import About from "./Pages/About";
+import ContactUs from "./Pages/ContactUs";
+import OrderPage from "./Pages/Order";
+import ProductPage from "./Pages/ProductPage";
+import CategoryContent from "./Pages/CategoryContent";
+import DisProducts from "./Pages/Dis";
+import ProductSection from "./Pages/Detail";
 
 function App() {
   return (
     <div className="App">
       <Router>
         {/* <AuthProvider> */}
-          <Navbar />
-          <div className='h-full'>
+        <Navbar />
+        <div className="h-full">
           <Routes>
-            {/* <Route path='/' element={<Dashboard />} /> */}
-            <Route path='/' element={<Home />} />
-            {/* <Route path='/signup' element={<Register />} />
-            <Route path='/login' element={<SignIn />} /> */}
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<SignIn />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/admin" element={<AccountAdmin />} />
             <Route path="*" element={<NotFound />} />
-            <Route exact path="/settings" element={<Settings/>} />
-            <Route exact path="/tables" element={<Tables/>} />
-            <Route exact path="/maps" element={<Maps/>} />
-            {/* <Redirect from="*" to="/" /> */}
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/category/:category" element={<CategoryContent />} />
+            <Route path="/orders" element={<OrderPage />} />
+            <Route path="/products" element={<ProductPage />} />
+            <Route path="/discount/:dis" element={<DisProducts />} />
+            <Route path="/product/:id" element={<ProductSection />} />
           </Routes>
-          </div>
-          <Footer />
+        </div>
+        <Footer />
         {/* </AuthProvider> */}
       </Router>
     </div>

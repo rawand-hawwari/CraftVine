@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Profile from "../Components/users/Profile";
-import Wishlist from "../Components/users/Wishlist";
-import { useCookies } from "react-cookie";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import Dashboard from './Dashboard';
+import axios from 'axios'
+import Profile from '../users/Profile';
+import User from './Pages/User';
+import Change from './Change';
 
-
-const Account = () => {
-  const [user, setUser] = useState([]);
-  const [page, setPage] = useState("profile");
+const AccountAdmin = () => {
+    const [user, setUser] = useState([]);
+  const [page, setPage] = useState("dashboard");
   const [photoPreview, setPhotoPreview] = useState(null);
-  const [cookies, setCookie, removeCookie] = useCookies(['token']);
-  const history = useNavigate();
 
   // fetch products
   useEffect(() => {
@@ -26,6 +23,10 @@ const Account = () => {
       });
   }, []);
 
+  function logout(){
+
+  }
+
   // useEffect(() => {
   //   if (user.profile_image_name) {
   //         const reader = new FileReader();
@@ -35,11 +36,6 @@ const Account = () => {
   //         };
   //         reader.readAsDataURL(user.profile_image_name);}
   // }, [user.profile_image_name]);
-
-  function logout(){
-    removeCookie('token');
-    history("/");
-  }
 
   // to open and close sidebar
   const [isSideOpen, setIsSideOpen] = useState(true);
@@ -53,11 +49,10 @@ const Account = () => {
     setIsSideOpen(!isSideOpen);
   }
   // to open and close sidebar //end
-
   return (
     <div className="flex flex-wrap">
       {/* sidebar */}
-      <div className="relative w-[260px] h-full">
+      <div className="relative w-[260px] h-full z-40">
         <div
           className={`peer absolute top-0 border ${position} lg:left-0 h-full w-full object-cover transition-all delay-100 duration-1000`}
         >
@@ -153,60 +148,41 @@ const Account = () => {
             <div className="flex flex-col justify-between flex-1 mt-6">
               <nav className="-mx-3 space-y-6 ">
                 <div className="space-y-3 ">
-                  <label className="px-3 text-xs text-teal-700 uppercase dark:text-gray-400">
-                    Manage Account
-                  </label>
-
                   <button
                     className="w-full flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
-                    onClick={() => setPage("profile")}
+                    onClick={() => setPage("dashboard")}
                   >
-                    <span className="mx-2 text-sm font-medium">Profile</span>
+                    <span className="mx-2 text-sm font-medium">Dashboard</span>
+                  </button>
+
+                  <button className="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" onClick={() => setPage("users")}>
+                    <span className="mx-2 text-sm font-medium">
+                      Users
+                    </span>
                   </button>
                 </div>
 
                 <div className="space-y-3 ">
-                  <label className="px-3 text-xs text-teal-700 uppercase dark:text-gray-400">
-                    Orders
-                  </label>
+                  <button onClick={() => setPage("products")} className="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
+                    <span className="mx-2 text-sm font-medium">Products</span>
+                  </button>
 
                   <button onClick={() => setPage("orders")} className="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
                     <span className="mx-2 text-sm font-medium">Orders</span>
                   </button>
+
+                  <button onClick={() => setPage("offers")} className="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
+                    <span className="mx-2 text-sm font-medium">Offers</span>
+                  </button>
                 </div>
 
                 <div className="space-y-3 ">
-                  <label className="px-3 text-xs text-teal-700 uppercase dark:text-gray-400">
-                    Wishlist
-                  </label>
-
-                  <button onClick={() => setPage("wishlist")} className="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
-                    <span className="mx-2 text-sm font-medium">Wishlist</span>
+                  <button onClick={() => setPage("reviews")} className="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
+                    <span className="mx-2 text-sm font-medium">Reviews</span>
                   </button>
 
-                  <button onClick={() => setPage("cart")} className="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
-                    <span className="mx-2 text-sm font-medium">Cart</span>
-                  </button>
-                </div>
-                <div className="space-y-3 ">
-                  <button
-                    className="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
-                    onClick={logout}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      class="h-5 w-5"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span className="mx-2 text-sm font-medium">Log Out</span>
+                  <button onClick={() => setPage("profile")} className="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
+                    <span className="mx-2 text-sm font-medium">Profile</span>
                   </button>
                 </div>
               </nav>
@@ -215,20 +191,18 @@ const Account = () => {
         </div>
       </div>
       {/* content */}
+      <div className={`${page == "dashboard" ? "block" : "hidden"} w-full`}>
+        <Dashboard />
+      </div>
       <div className={`${page == "profile" ? "block" : "hidden"} w-full`}>
         <Profile />
       </div>
-      <div className={`${page == "wishlist" ? "block" : "hidden"} w-full`}>
-        <Wishlist />
+      <div className={`${page == "users" ? "block" : "hidden"} w-full`}>
+        <User />
       </div>
-      <div className={`${page == "cart" ? "block" : "hidden"} w-full`}>
-        {/* <Wishlist /> */}
-      </div>
-      <div className={`${page == "orders" ? "block" : "hidden"} w-full`}>
-        {/* <Wishlist /> */}
-      </div>
+      <div><Change/></div>
     </div>
-  );
-};
+  )
+}
 
-export default Account;
+export default AccountAdmin
