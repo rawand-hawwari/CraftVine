@@ -37,7 +37,7 @@
         "https://m.media-amazon.com/images/I/51qBX7yXpWL.jpg"
       ],
       "price": 79.99,
-      "rating": 4.0,
+      "rating": 4,
       "quantity": 20,
       "outofstock": false,
       "category": "Chairs"
@@ -60,7 +60,7 @@
       "id": 5,
       "title": "Glass Bookshelf",
       "description": "A modern glass bookshelf to display your books.",
-      "image":[
+      "image": [
         "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
         "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
       ],
@@ -135,7 +135,7 @@
         "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
       ],
       "price": 69.99,
-      "rating": 4.0,
+      "rating": 4,
       "quantity": 14,
       "outofstock": false,
       "category": "Tables"
@@ -186,7 +186,7 @@
       "id": 14,
       "title": "Glass Dining Table",
       "description": "A glass dining table for modern dining spaces.",
-      "image":[
+      "image": [
         "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
         "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
       ],
@@ -281,42 +281,24 @@
       "category": "Shelves"
     }
   ],
-  "images": [
+  "users": [
     {
       "id": 1,
-      "product_id": 1,
-      "image": "https://cdn11.bigcommerce.com/s-fj5u5hhzyb/images/stencil/1280x1280/products/27344/15554/NEW_Boucle_Occasional_Chair_Lores_01__99432.1675195686.jpg?c=1",
-      "color": "White"
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "johndoe@example.com",
+      "phone": "123-456-7890",
+      "profile_image_name": null
     },
     {
       "id": 2,
-      "product-id": 1,
-      "image": "https://cdn11.bigcommerce.com/s-fj5u5hhzyb/images/stencil/1280x1280/products/27344/15469/Boucle_Occasional_Chair_Deepetch_02__74810.1674505757.jpg?c=1",
-      "color": "White"
-    },
-    {
-      "id": 3,
-      "product-id": 2,
-      "image": "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-Gray_b5917db5-8495-4a3e-9445-8aa5634c4e15.bced13ce514d814246c69426b74501e9.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
-      "color": "Grey"
-    },
-    {
-      "id": 4,
-      "product-id": 2,
-      "image": "https://i5.walmartimages.com/asr/ee8124e2-5f99-41d8-bc51-45f8b5405c70.35e73b3cacaf2029fb6a9fd3ae9df444.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
-      "color": "Grey"
-    },
-    {
-      "id": 5,
-      "product-id": 2,
-      "image": "https://i5.walmartimages.com/asr/660f0422-a571-49e1-b5f1-266476087db4.ed117ebf2cf2ec116014c1ee5f5921e5.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF",
-      "color": "White"
-    },
-    {
-      "id": 6,
-      "product-id": 2,
-      "image": "https://i5.walmartimages.com/seo/Homall-Modern-U-Shape-Sectional-Sofa-Chenille-Fabric-Modular-Couch-4-Seat-Oversized-Sofa-with-Chaise-for-Living-Room-White_0b238f4e-7fa4-431d-97d5-e68ea4564461.39eb74726f78ec7f932cc54d1398e000.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF",
-      "color": "White"
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "profile_image_name": "jane-smith.jpg",
+      "email": "janesmith@example.com",
+      "password": "hashed_password_here",
+      "phone": "987-654-3210",
+      "created_at": "2023-10-27T13:30:00Z"
     }
   ]
 }
